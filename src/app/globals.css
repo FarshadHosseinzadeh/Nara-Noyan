@@ -2422,11 +2422,14 @@ header .wab:hover img {
     opacity 0.6s;
 }
 
-
 /* Mobile navigation + page gutters */
-.menu-toggle { display:none; }
+.menu-toggle {
+  display: none;
+}
 @media (max-width: 620px) {
-  header { z-index: 50; }
+  header {
+    z-index: 50;
+  }
   header .w {
     direction: ltr;
     display: flex;
@@ -2455,7 +2458,10 @@ header .wab:hover img {
     cursor: pointer;
     position: relative;
     z-index: 3;
-    transition: background .25s, border-color .25s, transform .25s;
+    transition:
+      background 0.25s,
+      border-color 0.25s,
+      transform 0.25s;
   }
   .menu-toggle span {
     display: block;
@@ -2463,13 +2469,30 @@ header .wab:hover img {
     height: 2px;
     border-radius: 3px;
     background: currentColor;
-    transition: transform .28s ease, opacity .2s ease, width .28s ease;
+    transition:
+      transform 0.28s ease,
+      opacity 0.2s ease,
+      width 0.28s ease;
   }
-  .menu-toggle span:nth-child(2) { width: 13px; margin-left: 6px; }
-  .menu-toggle[aria-expanded="true"] { background: var(--acc); border-color: var(--acc); color: var(--on); }
-  .menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; transform: translateX(-8px); }
-  .menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .menu-toggle span:nth-child(2) {
+    width: 13px;
+    margin-left: 6px;
+  }
+  .menu-toggle[aria-expanded="true"] {
+    background: var(--acc);
+    border-color: var(--acc);
+    color: var(--on);
+  }
+  .menu-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  .menu-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
   .logo {
     order: 2;
     direction: rtl;
@@ -2494,14 +2517,17 @@ header .wab:hover img {
     border: 1px solid var(--line);
     border-radius: 20px;
     background: color-mix(in srgb, var(--surf) 94%, transparent);
-    box-shadow: 0 18px 55px rgba(0,0,0,.22);
+    box-shadow: 0 18px 55px rgba(0, 0, 0, 0.22);
     backdrop-filter: blur(20px);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transform: translateY(-8px) scale(.98);
+    transform: translateY(-8px) scale(0.98);
     transform-origin: top left;
-    transition: opacity .22s ease, transform .22s ease, visibility .22s;
+    transition:
+      opacity 0.22s ease,
+      transform 0.22s ease,
+      visibility 0.22s;
   }
   nav#siteNav a {
     display: flex;
@@ -2513,8 +2539,11 @@ header .wab:hover img {
     color: var(--ink);
     background: var(--bg);
   }
-  nav#siteNav a::after { display:none; }
-  nav#siteNav a:hover, nav#siteNav a.on {
+  nav#siteNav a::after {
+    display: none;
+  }
+  nav#siteNav a:hover,
+  nav#siteNav a.on {
     color: var(--acc);
     border-color: var(--line);
     background: var(--glow);
@@ -2525,15 +2554,29 @@ header .wab:hover img {
     pointer-events: auto;
     transform: translateY(0) scale(1);
   }
-  .tt { order: 3; flex: 0 0 auto; }
-  .wab { order: 4; flex: 0 0 auto; padding: 8px 12px; font-size: 13px; white-space: nowrap; }
-  .wab img { width: 21px; height: 21px; }
+  .tt {
+    order: 3;
+    flex: 0 0 auto;
+  }
+  .wab {
+    order: 4;
+    flex: 0 0 auto;
+    padding: 8px 12px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+  .wab img {
+    width: 21px;
+    height: 21px;
+  }
   /* Only secondary pages get the requested side gutters. Home + its FAQ stay untouched. */
   .v:not(#v-home) .w {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .v:not(#v-home) .ph { padding-top: 38px; }
+  .v:not(#v-home) .ph {
+    padding-top: 38px;
+  }
   .v:not(#v-home) .ct,
   .v:not(#v-home) .pg,
   .v:not(#v-home) .bl,
@@ -2546,26 +2589,53 @@ header .wab:hover img {
     max-width: 100%;
   }
   .v:not(#v-home) .ct > *,
-  .v:not(#v-home) .g2 > * { min-width: 0; }
+  .v:not(#v-home) .g2 > * {
+    min-width: 0;
+  }
   .v:not(#v-home) input,
   .v:not(#v-home) select,
-  .v:not(#v-home) textarea { min-width: 0; }
-  .v:not(#v-home) .band { padding: 24px 20px; }
+  .v:not(#v-home) textarea {
+    min-width: 0;
+  }
+  .v:not(#v-home) .band {
+    padding: 24px 20px;
+  }
   .v:not(#v-home) form,
-  .v:not(#v-home) .ok { padding: 22px 18px; }
-  footer { margin-bottom: 0; }
+  .v:not(#v-home) .ok {
+    padding: 22px 18px;
+  }
+  footer {
+    margin-bottom: 0;
+  }
 }
 @media (max-width: 380px) {
-  header .w { gap: 7px; padding-inline: 12px; }
-  .logo { gap: 6px; font-size: 15px; }
-  .logo .lg img { max-width: 42px; }
-  .tt { transform: scale(.92); transform-origin: center; }
-  .wab { padding: 7px 9px; gap: 5px; font-size: 12px; }
+  header .w {
+    gap: 7px;
+    padding-inline: 12px;
+  }
+  .logo {
+    gap: 6px;
+    font-size: 15px;
+  }
+  .logo .lg img {
+    max-width: 42px;
+  }
+  .tt {
+    transform: scale(0.92);
+    transform-origin: center;
+  }
+  .wab {
+    padding: 7px 9px;
+    gap: 5px;
+    font-size: 12px;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
-  .menu-toggle span, nav#siteNav { transition:none !important; }
+  .menu-toggle span,
+  nav#siteNav {
+    transition: none !important;
+  }
 }
-
 
 /* Consistent horizontal gutters for every inner-page intro (mobile/tablet/desktop).
    The home page intentionally keeps its original spacing. */
@@ -2573,9 +2643,7 @@ header .wab:hover img {
   padding-inline: 20px;
 }
 
-
 @tailwind utilities;
-
 
 /* Tablet header: keep the desktop-style navigation, but never require horizontal scrolling. */
 @media (min-width: 621px) and (max-width: 900px) {
@@ -2607,6 +2675,102 @@ header .wab:hover img {
   max-width: none;
 }
 
+/* ===== Mobile menu v2: stacked links + WhatsApp + close button ===== */
+.nav-head,
+.nav-wa {
+  display: none;
+}
+@media (max-width: 620px) {
+  nav#siteNav {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 10px;
+    max-height: calc(100dvh - 100px);
+    overflow-y: auto;
+  }
+  .nav-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 6px 6px 2px;
+    font-weight: 800;
+    font-size: 15px;
+    color: var(--mut);
+  }
+  .nav-close {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: var(--bg);
+    color: var(--ink);
+    cursor: pointer;
+    transition:
+      background 0.2s,
+      color 0.2s,
+      border-color 0.2s,
+      transform 0.3s;
+  }
+  .nav-close:hover,
+  .nav-close:focus-visible {
+    background: var(--acc);
+    border-color: var(--acc);
+    color: var(--on);
+    transform: rotate(90deg);
+  }
+  nav#siteNav a:not(.nav-wa)::after {
+    content: "‹";
+    display: block;
+    position: static;
+    inset: auto;
+    width: auto;
+    height: auto;
+    margin-inline-start: auto;
+    background: none;
+    border-radius: 0;
+    transform: none;
+    font-size: 22px;
+    line-height: 1;
+    color: var(--mut);
+  }
+  nav#siteNav a.on::after {
+    color: var(--acc);
+  }
+  nav#siteNav a.nav-wa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 50px;
+    margin-top: 4px;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #25d366, #0e8f6f);
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 6px 18px rgba(14, 143, 111, 0.28);
+  }
+  nav#siteNav a.nav-wa:hover {
+    background: linear-gradient(135deg, #25d366, #0e8f6f);
+    color: #fff;
+    border: 0;
+  }
+  nav#siteNav a.nav-wa img {
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+    border-radius: 50%;
+    background: #fff;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-close {
+    transition: none;
+  }
+}
 
 /* ===== Next.js additions ===== */
 img {
@@ -2646,4 +2810,21 @@ img {
 .nf {
   text-align: center;
   padding: 96px 20px 110px;
+}
+
+@media (max-width: 620px) {
+  header .w > .menu-toggle {
+    order: 1;
+  }
+  header .w > .wab {
+    order: 2;
+  }
+  header .w > .tt {
+    order: 3;
+    margin-left: auto;
+  }
+  header .w > .logo {
+    order: 4;
+    margin: 0;
+  }
 }
